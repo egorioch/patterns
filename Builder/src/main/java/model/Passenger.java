@@ -10,4 +10,11 @@ public class Passenger {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    @Override
+    public String toString() {
+        return "Passenger{" +
+                "role=" + role +
+                '}';
+    }
 }

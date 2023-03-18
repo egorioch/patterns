@@ -3,6 +3,7 @@ package director;
 import builder.VehicleBuilder;
 import exception.ExceptionRule;
 import model.Vehicle;
+import util.SetSeatForPassengers;
 
 public class Director {
     VehicleBuilder vehicleBuilder;
@@ -18,12 +19,13 @@ public class Director {
             vehicleBuilder.buildSeatForDriver();
             vehicleBuilder.buildPassengers();
             vehicleBuilder.buildDriver();
-            vehicleBuilder.buildQuantitySeatsForPassengers();
         } catch (ExceptionRule exceptionRule){
             System.out.println(exceptionRule.getMessage());
         }
 
-        return vehicleBuilder.getVehicle();
+        Vehicle vehicle = vehicleBuilder.getVehicle();
+        vehicle.setKidSeat(SetSeatForPassengers.kidSeat());
+        return vehicle;
     }
 
 }

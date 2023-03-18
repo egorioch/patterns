@@ -11,9 +11,9 @@ public abstract class VehicleBuilder {
     }
 
     public abstract void buildSeatForDriver();
-    public abstract void buildQuantitySeatsForPassengers() throws ExceptionRule;
+    //public abstract void buildQuantitySeatsForPassengers() throws ExceptionRule;
     public abstract void buildDriver();
-    public abstract void buildPassengers();
+    public abstract void buildPassengers() throws ExceptionRule;
 
     public Vehicle getVehicle() {
         return this.vehicle;

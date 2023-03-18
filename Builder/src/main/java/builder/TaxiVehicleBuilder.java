@@ -5,6 +5,7 @@ import model.Driver;
 import model.License;
 import model.Passenger;
 import model.TaxiDriver;
+import util.SetSeatForPassengers;
 import util.UserScanner;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class TaxiVehicleBuilder extends VehicleBuilder{
         vehicle.setSeatForDriver(1);
     }
 
-    @Override
+    /*@Override
     public void buildQuantitySeatsForPassengers() throws ExceptionRule {
         System.out.print("Введите число пассажиров: ");
         int quantityOfPassengers = Integer.parseInt(UserScanner.getString());
@@ -25,7 +26,7 @@ public class TaxiVehicleBuilder extends VehicleBuilder{
             throw new ExceptionRule(String.format("Число пассажиров не может быть больше, чем %d", 4));
 
         vehicle.setQuantitySeatsForPassengers(quantityOfPassengers);
-    }
+    }*/
 
     @Override
     public void buildDriver() {
@@ -35,8 +36,14 @@ public class TaxiVehicleBuilder extends VehicleBuilder{
     }
 
     @Override
-    public void buildPassengers() {
-        ArrayList<Passenger> passengers = new ArrayList<>();
+    public void buildPassengers() throws ExceptionRule {
+        System.out.print("Введите число пассажиров: ");
+        int quantityOfPassengers = Integer.parseInt(UserScanner.getString());
+
+        if (quantityOfPassengers > 4)
+            throw new ExceptionRule(String.format("Число пассажиров не может быть больше, чем %d", 30));
+
+        ArrayList<Passenger> passengers = SetSeatForPassengers.setPassengers(quantityOfPassengers);
 
         vehicle.setPassengers(passengers);
     }
