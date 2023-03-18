@@ -1,17 +1,22 @@
 package builder;
 
+import exception.ExceptionRule;
 import model.Vehicle;
 
 public abstract class VehicleBuilder {
     Vehicle vehicle;
 
-    void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void createVehicle() {
+        this.vehicle = new Vehicle();
     }
 
-    abstract void buildSeatForDriver();
-    abstract void buildQuantitySeatsForPassengers();
-    abstract void buildDriver();
-    abstract void buildPassengers();
+    public abstract void buildSeatForDriver();
+    public abstract void buildQuantitySeatsForPassengers() throws ExceptionRule;
+    public abstract void buildDriver();
+    public abstract void buildPassengers();
+
+    public Vehicle getVehicle() {
+        return this.vehicle;
+    }
 
 }

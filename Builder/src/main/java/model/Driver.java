@@ -1,6 +1,6 @@
 package model;
 
-public class Driver {
+public abstract class Driver {
     private License license;
 
     public License getLicense() {
@@ -9,5 +9,12 @@ public class Driver {
 
     public void setLicense(License license) {
         this.license = license;
+    }
+
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "license=" + license +
+                '}';
     }
 }

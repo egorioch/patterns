@@ -1,5 +1,8 @@
 package model;
 
+import exception.ExceptionRule;
+import util.UserScanner;
+
 import java.util.ArrayList;
 
 public class Vehicle {
@@ -22,5 +25,16 @@ public class Vehicle {
 
     public void setPassengers(ArrayList<Passenger> passengers) {
         this.passengers = passengers;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "seatForDriver=" + seatForDriver +
+                ", quantitySeatsForPassengers=" + quantitySeatsForPassengers +
+                ", driver=" + driver
+                + String.format("(license: %s)", driver.getLicense()) +
+                ", passengers=" + passengers +
+                '}';
     }
 }
