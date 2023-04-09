@@ -1,0 +1,4 @@
+1; TR-01; 10.03.2023; Rostov-Ivolga;
+2; TR-01; 10.03.2023; Tver-Canada;
+3; TR-01; 10.03.2023; Moscow-Hvostovo;
+4; TR-01; 10.03.2023; Bridge-Jopil;
