@@ -1,6 +1,8 @@
 package proxy.repo;
 
+import proxy.model.DrawLogic;
+
 public interface DrawImageInterface {
-    public void loadPicture();
-    public void drawImage();
+    public DrawLogic createAndShowGUI();
+
 }
