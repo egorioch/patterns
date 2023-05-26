@@ -1,0 +1,20 @@
+import {createRouter, createWebHistory} from "vue-router";
+import MainPage from '@/views/MainPage.vue'
+import CatalogPage from '@/views/CatalogPage.vue'
+
+export default createRouter({
+    history: createWebHistory(),
+    routes: [
+        {
+            path: "/start",
+            name: 'MainPage',
+            component: MainPage
+        },
+        {
+            path: "/catalog",
+            name: "CatalogPage",
+            component: CatalogPage
+        }
+
+    ]
+})
