@@ -1,7 +1,7 @@
 package org.patterns.stategy;
 
 // Конкретные стратегии платежей
-class CreditCardStrategy implements PaymentStrategy {
+public class CreditCardStrategy implements PaymentStrategy {
     private String cardNumber;
     private String cvv;
     private String expirationDate;
@@ -14,7 +14,8 @@ class CreditCardStrategy implements PaymentStrategy {
 
     @Override
     public void pay(double amount) {
-        System.out.println("Paid $" + amount + " with credit card");
+        System.out.println("Оплачено " + amount + " руб. с помощью кредитной карты");
         // Здесь был бы код для выполнения платежа с использованием кредитной карты
+        // Типа вычет средств из баланса пользователя, отправка на почту уведомления о заказе
     }
 }

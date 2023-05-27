@@ -5,20 +5,16 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Map;
 
-//
-//@Table
-//@Entity
+
 @Getter
 @Setter
 public class Order {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
-//    @OneToMany
-//    private List<Beer> beerList;
+    private Long id;
+    private Map<String, Integer> products;
+    private String paymentMethod;
+    private float totalPrice;
 
+    // Конструктор и геттеры/сеттеры
 }

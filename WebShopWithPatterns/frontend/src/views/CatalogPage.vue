@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .card-group-layer {
   margin: 20px;
   padding: 30px;

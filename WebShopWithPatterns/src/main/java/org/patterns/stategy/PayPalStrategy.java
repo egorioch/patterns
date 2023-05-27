@@ -1,6 +1,6 @@
 package org.patterns.stategy;
 
-class PayPalStrategy implements PaymentStrategy {
+public class PayPalStrategy implements PaymentStrategy {
     private String email;
     private String password;
 
@@ -11,7 +11,8 @@ class PayPalStrategy implements PaymentStrategy {
 
     @Override
     public void pay(double amount) {
-        System.out.println("Paid $" + amount + " with PayPal");
+        System.out.println("Оплачено " + amount + " с помощью PayPal");
         // Здесь был бы код для выполнения платежа с использованием PayPal
+        // Типа вычет средств из баланса пользователя, отправка на почту уведомления о заказе
     }
 }
